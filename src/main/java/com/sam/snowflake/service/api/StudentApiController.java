@@ -7,6 +7,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 
+import java.util.List;
+
 @Controller
 public class StudentApiController implements StudentApi {
 
@@ -17,4 +19,7 @@ public class StudentApiController implements StudentApi {
         return new ResponseEntity<>(studentRepository.findStudentById(studentId), HttpStatus.OK);
     }
 
+    public ResponseEntity<List<Student>> getAllStudent() {
+        return new ResponseEntity<>(studentRepository.findAllStudent(), HttpStatus.OK);
+    }
 }
