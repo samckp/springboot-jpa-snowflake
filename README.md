@@ -32,6 +32,8 @@ mvn spring-boot:run
 ```
 http://localhost:8080/student?studentId={studentId}
 
+http://localhost:8080/student/all
+
 Swagger UI: http://localhost:8080
 ```
 
